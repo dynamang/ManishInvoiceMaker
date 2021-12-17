@@ -111,7 +111,9 @@ table.balance td { text-align: right; }
 }
 #terms textarea{
     width:100%;
-    text-align:center
+     font:10px Helvetica,Sans-Serif;
+   
+	text-align:center
 }
 
 /* aside */
