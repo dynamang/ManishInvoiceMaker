@@ -86,20 +86,26 @@ function myFunction() {
 		document.getElementById("date").innerHTML=getDateTime(1);
                
 }
-function myFunction1(){
-	myFunction();
+function myFunction1(){ 
+	 myFunction();
 	 console.log("IN print funtion");
-	 this.document.getElementById("invoice_num").innerText =  getDateTime(0);
+	 var name=this.document.getElementById("cusName").value;
+	 var date=getDateTime(0);
+     var fname="BILL-"+name+"-"+date;
+	 this.document.getElementById("invoice_num").innerText =  date;
 	 this.document.getElementById("date").innerText=getDateTime(1);
-	
+	console.log(name);
+	console.log("Dyno");
+
 	const invoice = this.document.getElementById("invoice");
 	console.log(invoice);
 	var opt = {
 		margin: 1,
-		filename: getDateTime(0),
+		filename: fname,
 		image: { type: 'jpeg', quality: 1 },
 		html2canvas: { scale: 4 },
 		jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
 	};
 	html2pdf().from(invoice).set(opt).save();
+
 }
