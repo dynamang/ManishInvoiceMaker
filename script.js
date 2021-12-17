@@ -1,11 +1,11 @@
 function getDateTime(choice) {
 	var now     = new Date(); 
-	var year    = now.getFullYear();
+	var year    = now.getFullYear()-2000;
 	var month   = now.getMonth()+1; 
 	var day     = now.getDate();
 	var hour    = now.getHours();
 	var minute  = now.getMinutes();
-	var second  = now.getSeconds(); 
+	//var second  = now.getSeconds(); 
 	if(month.toString().length == 1) {
 		 month = '0'+month;
 	}
@@ -18,16 +18,13 @@ function getDateTime(choice) {
 	if(minute.toString().length == 1) {
 		 minute = '0'+minute;
 	}
-	if(second.toString().length == 1) {
-		 second = '0'+second;
-	}   
 	if(choice===1){
 	var dateTime = day+'/'+month+'/'+year;
 	return dateTime;
     }
 	else
 	{
-	   var dateTime = year.toString()+month+day+hour+minute+second;   
+	   var dateTime = year.toString()+month+day+hour+minute;   
 	   return dateTime;	
 	}
 }
