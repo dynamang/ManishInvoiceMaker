@@ -13,22 +13,22 @@
 	
 		<div id="invoice">
 		<header>
-			<h1>GOYAL KITCHENWARE</h1>
+			<h1 contenteditable>GOYAL KITCHENWARE</h1>
 			<address contenteditable>
 				<pre>Name    :<input type="text" id="cusName"></pre>
 				<pre>Address :<input type="text"> </pre>
 			</address>
 			<table class="meta">
 				<tr>
-					<th><span contenteditable>Invoice #</span></th>
+					<th><span >Invoice #</span></th>
 					<td id="invoice_num"><span  id="invoice_num" >101138</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable>Date</span></th>
+					<th><span >Date</span></th>
 					<td><span  id="date">January 1, 2021</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable>Amount Due</span></th>
+					<th><span >Amount Due</span></th>
 					<td><span id="prefix">₹</span ><span id="due">0</span></td>
 				</tr>
 			</table>
@@ -38,10 +38,10 @@
 			
 			<table class="inventory" id="myTable">
 					<tr>
-						<th><span contenteditable>Item</span></th>
-						<th><span contenteditable>Rate</span></th>
-						<th><span contenteditable>Quantity</span></th>
-						<th><span contenteditable>Price</span></th>
+						<th><span >Item</span></th>
+						<th><span >Rate</span></th>
+						<th><span >Quantity</span></th>
+						<th><span >Price</span></th>
 					</tr>
 					<tr>
 						<td><a class="cut" onclick="deleteRow(this)">-</a><span contenteditable></span></td>
@@ -53,19 +53,19 @@
 			<a class="add" onclick="addRow()" >+</a>
 			<table class="balance">
 				<tr>
-					<th><span contenteditable >Total</span></th>
+					<th><span  >Total</span></th>
 					<td><span >₹</span><span id="finalTotal">0</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable >Amount Paid</span></th>
+					<th><span  >Amount Paid</span></th>
 					<td><span >₹</span><span contenteditable id="finalPaid">0</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable >Balance Due</span></th>
+					<th><span  >Balance Due</span></th>
 					<td><span >₹</span><span id="finalDue">0</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable >Total items</span></th>
+					<th><span  >Total items</span></th>
 					<td><span id="finalNum">0</span></td>
 				</tr>
 			</table>
