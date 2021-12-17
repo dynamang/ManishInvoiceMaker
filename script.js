@@ -107,5 +107,13 @@ function myFunction1(){
 		jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
 	};
 	html2pdf().from(invoice).set(opt).save();
+}
 
+function clickCounter()
+{ 
+		localStorage.setItem("lastname", this.document.getElementById("invoice").innerHTML);
+}
+function clickCounter1()
+{
+	document.getElementById("invoice").innerHTML = localStorage.getItem("lastname");	
 }
