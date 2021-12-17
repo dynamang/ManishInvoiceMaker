@@ -1,0 +1,79 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Invoice</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+	
+		<div id="invoice">
+		<header>
+			<h1>GOYAL KITCHENWARE</h1>
+			<address contenteditable>
+				<pre>Name    :      </pre>
+				<pre>Address :   </pre>
+			</address>
+			<table class="meta">
+				<tr>
+					<th><span contenteditable>Invoice #</span></th>
+					<td id="invoice_num"><span  id="invoice_num" >101138</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Date</span></th>
+					<td><span  id="date">January 1, 2021</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Amount Due</span></th>
+					<td><span id="prefix">₹</span ><span id="due">0</span></td>
+				</tr>
+			</table>
+	
+		</header>
+		<article>
+			
+			<table class="inventory" id="myTable">
+					<tr>
+						<th><span contenteditable>Item</span></th>
+						<th><span contenteditable>Rate</span></th>
+						<th><span contenteditable>Quantity</span></th>
+						<th><span contenteditable>Price</span></th>
+					</tr>
+					<tr>
+						<td><a class="cut" onclick="deleteRow(this)">-</a><span contenteditable></span></td>
+						<td contenteditable></td>
+						<td contenteditable></td>
+						<td></td>
+					</tr>
+			</table>
+			<a class="add" onclick="addRow()" >+</a>
+			<table class="balance">
+				<tr>
+					<th><span contenteditable >Total</span></th>
+					<td><span >₹</span><span id="finalTotal">0</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable >Amount Paid</span></th>
+					<td><span >₹</span><span contenteditable id="finalPaid">0</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable >Balance Due</span></th>
+					<td><span >₹</span><span id="finalDue">0</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable >Total items</span></th>
+					<td><span id="finalNum">0</span></td>
+				</tr>
+			</table>
+		</article>
+		
+	</div>
+	<button class="button" onclick="myFunction()">Calculate</button><br>
+	<button class="button" onclick="myFunction1()">Click To print</button><br>
+		
+	</body>
+</html>
