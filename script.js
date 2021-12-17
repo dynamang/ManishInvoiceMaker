@@ -108,12 +108,17 @@ function myFunction1(){
 	};
 	html2pdf().from(invoice).set(opt).save();
 }
-
 function clickCounter()
 { 
-		localStorage.setItem("lastname", this.document.getElementById("invoice").innerHTML);
+		localStorage.setItem("current", this.document.getElementById("invoice").innerHTML);
 }
 function clickCounter1()
 {
-	document.getElementById("invoice").innerHTML = localStorage.getItem("lastname");	
+	document.getElementById("invoice").innerHTML = localStorage.getItem("current");	
 }
+function clickCounter2()
+{
+	document.getElementById("invoice").innerHTML = localStorage.getItem("default");	
+}
+localStorage.setItem("current", this.document.getElementById("invoice").innerHTML);
+localStorage.setItem("default", this.document.getElementById("invoice").innerHTML);
